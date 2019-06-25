@@ -9,7 +9,7 @@ abmort <- read.csv("mooredata.csv", fill = FALSE, header = TRUE)
 x <- abmort$x.elnino # time in years 
 y <- abmort$y.elnino # proportion of the initial abalone population alive
 
-mu <- 0.11 #abalone natural mortality rate
+mu <- 0.15 #abalone natural mortality rate (from Tegner et al. 1989)
 df <- data.frame(x, y) #create data frame from your x y data
 m <- nls(y ~ exp(-(mu+r)*x), data = df, start = list(r = 0.1)) #nonlinear least squares fit
 summary(m) #summary of output m
