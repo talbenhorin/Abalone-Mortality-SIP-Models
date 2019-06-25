@@ -1,10 +1,9 @@
 # Simple exponential decay functions to quantify abalone mortality from experimental data
 # Data from Moore et al. (2011) 
 
-setwd("~/R/Abalone Mortality") #set local working directory (where your .csv is saved)
 rm(list=ls(all=TRUE)) #clears workspace
 
-abmort <- read.csv("mooredata.csv", fill = FALSE, header = TRUE) 
+abmort <- read.csv("https://raw.githubusercontent.com/talbenhorin/Abalone-Mortality-SIP-Models/master/mooredata.csv", fill = FALSE, header = TRUE) 
 
 x <- abmort$x.elnino # time in years 
 y <- abmort$y.elnino # proportion of the initial abalone population alive
